@@ -1,0 +1,14 @@
+.Contact {
+    vertical-align: center;
+    float: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#contact-label {
+    font-size: 50px;
+    opacity: 1;
+    color: rgba(#FFFFFF, 1);
+    text-decoration: bold;
+    transform: translateY(70px);
+}

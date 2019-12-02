@@ -1,0 +1,44 @@
+.ThirdPage {
+    text-align: center;
+    background-color: rgb(88, 82, 82);
+    background-size: 100%;
+    min-height: 30vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .Icons {
+      height: 100px;
+      width: 100px;
+      position: relative;
+      float: center;
+      padding: 40px 150px;
+      align-content: center;
+      vertical-align: center;
+  }
+
+  .IconsShirt {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    float: center;
+    padding: 40px 150px;
+    transform: translateX(-7px);
+    align-content: center;
+    vertical-align: center;
+  }
+
+  .Icon-Name {
+      float: center;
+      text-align: center;
+      align-content: center;
+      vertical-align: center;
+      display: inline;
+      font-size: 24px;
+      padding: 172px;
+      margin-top: -10px;
+      position: relative;
+      color: white;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }

@@ -1,0 +1,46 @@
+.Start-Button {
+    font-size: 18px;
+    background: rgb(88, 82, 82);
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 14px 46px;
+    text-align: center;
+    width: 225px;
+    transition: all 0.5s;
+    margin: 5px;
+  }
+  
+  .Start-Button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .Start-Button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .Start-Button:hover {
+    background-color: rgb(88, 82, 82, .7);
+    border-color: greenyellow;
+    color: greenyellow;
+    transition: 0.2s;
+  }
+  
+  .Start-Button:hover span {
+    padding-right: 25px;
+  }
+  
+  .Start-Button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
