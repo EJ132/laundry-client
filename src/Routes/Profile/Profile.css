@@ -1,0 +1,9 @@
+.profile_container{
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

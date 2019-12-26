@@ -1,0 +1,43 @@
+.ThirdPage {
+    text-align: center;
+    background-color: rgb(88, 82, 82);
+    background-size: 100%;
+    min-height: 30vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .Icon_Container, .Icon_Names {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .Icons {
+    margin-top: 60px;
+    margin-bottom: 5px;
+    height: 110px;
+    width: 110x;
+    vertical-align: center;
+  }
+
+  .Icon_Names ul {
+    width: 100%;
+    list-style-type: none;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .Icon_Names li {
+    padding: 6px 36px;
+  }
+
+  #wash {
+    margin-left: 15px;
+  }

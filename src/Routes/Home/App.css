@@ -1,25 +1,26 @@
-.App {
+.Main {
   text-align: center;
-  background-color: rgb(88, 82, 82);
   background-size: 100%;
-  min-height: 105vh;
+  margin-top: 50px;
+  min-height: 65vh;
   height: 100%;
   width: 100%;
   z-index: 1;
+  background: url('https://images.pexels.com/photos/2525903/pexels-photo-2525903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+  center
+  center;
+  background-size: cover;
 }
 
-.Centerlogo {
-  text-decoration: none;
-  overflow: hidden;
-}
+/* NAVBAR */
 
 .topnav {
   font-family: 'Georgia', serif;
   top: 0px;
-  height: 50px;
+  height: 80px;
   width: 100%;
   overflow: hidden;
-  background-color: rgb(117, 81, 58);
+  background-color: rgb(255, 255, 255);
   position: fixed;
   background-size: 100%;
   z-index: 2;
@@ -28,21 +29,17 @@
 .topnav a {
   float: right;
   display: block;
-  color: rgb(233, 233, 233);
+  color: rgb(0, 0, 0);
   text-align: center;
-  padding: 14px 16px;
+  padding: 30px 16px;
   text-decoration: none;
   font-size: 18px;
 }
 
 .topnav a:hover:not(#special) {
-  background-color: #3b3b3b;
+  text-decoration: underline;
   border-radius: 2px;
   height: 27px;
-}
-
-.topnav #special img:hover {
-  background-color: none;
 }
 
 .topnav #special {
@@ -54,17 +51,36 @@
   background-color: none;
 }
 
-.topnav header {
+#Nav_Header {
   float: left;
   padding: 14px 16px;
   display: block;
   text-align: center;
   margin-left: 48px;
-  position: fixed;
-  font-size: 18px;
-  overflow: hidden;
-  color: rgb(233, 233, 233);
+  font-size: 2.5rem;
+  color: rgb(90, 90, 90);
   font-weight: 500;
+}
+
+#Nav_Header:hover {
+  cursor: pointer;
+  text-decoration: none;
+} 
+
+
+/* ENDS THE NAVBAR */
+
+
+
+
+
+.Overlay_Homepage {
+  width: 100%;
+  min-height: 65vh;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.753);
 }
 
 .Main{
@@ -72,29 +88,24 @@
   color: white;
   margin: auto;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  overflow: hidden;
-  display: block;
-  justify-content: center;
-  transform: translate(0%, 50%);
+  margin-top: 70px;
 }
 
 .Main h1 {
   font-size: 54px;
-  overflow: hidden;
-  border-style: groove;
-  border-width: 3px 8px 3px 8px;
-  border-color: white;
-  border-radius: 5px;
   align-content: center;
+  margin-top: 200px;
   margin-right: 100px;
   margin-left: 100px;
   color: #FFFFFF;
-  text-shadow: 2px 1.5px 0px #7A7A7A;
   white-space: nowrap;
+  padding: 7px;
 }
 
 .Main h2 {
   text-decoration: none;
+  padding: 3px;
+  margin-bottom: 10px;
 }
 
 .BotFoot {

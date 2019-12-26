@@ -1,6 +1,6 @@
-.Learn-Button {
+.Start-Button {
     font-size: 18px;
-    background: rgb(88, 82, 82);
+    background: transparent;
     color: white;
     border-color: white;
     border-style: solid;
@@ -13,14 +13,14 @@
     margin: 5px;
   }
   
-  .Learn-Button span {
+  .Start-Button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  .Learn-Button span:after {
+  .Start-Button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -29,18 +29,18 @@
     transition: 0.5s;
   }
   
-  .Learn-Button:hover {
-    background-color: rgb(88, 82, 82, .7);
-    border-color: lightblue;
-    color: lightblue;
+  .Start-Button:hover {
+    background-color: transparent;
+    border-color: rgb(32, 138, 38);
+    color: lightgreen;
     transition: 0.2s;
   }
   
-  .Learn-Button:hover span {
+  .Start-Button:hover span {
     padding-right: 25px;
   }
   
-  .Learn-Button:hover span:after {
+  .Start-Button:hover span:after {
     opacity: 1;
     right: 0;
   }

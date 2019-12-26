@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import logo from '../Assets/logo.svg';
-import AuthApi from '../services/auth-api-service'
-import TokenService from '../services/token-service'
-import config from '../config'
-import '../CSS/Login.css';
+
+// Services
+import AuthApi from '../../services/auth-api-service'
+import TokenService from '../../services/token-service'
+import config from '../../config'
+
+// Style Sheets
+import './Login.css';
+
+// Components
+import NavBar from '../../Components/NavBar'
 
 class Login extends Component {
 
@@ -41,14 +47,7 @@ class Login extends Component {
         return (
             <div>
                 <div className="App-Login">
-                <div className="topnav">
-                <Link to="/Login">Login</Link>
-                <Link to="/Profile">Profile</Link>
-                <Link to="/Contact">Contact</Link>
-                <Link to="/Product">Products</Link>
-                <header>SHACKER</header>
-                <Link to="/" id="special"><img src={logo} alt="logo"/></Link>
-                </div>
+                <NavBar />
 
                 <form className="Login" onSubmit={this.handleLogin}>
                 <h1>Existing User</h1>

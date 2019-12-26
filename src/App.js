@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'; 
-import './CSS/App.css';
+import './Routes/Home/App.css';
 
-import HomePage from "./Routes/HomePage"
-import Product from './Routes/Product';
-import Contact from './Routes/Contact';
-import Login from './Routes/Login';
-import Profile from './Routes/Profile';
+import HomePage from "./Routes/Home/HomePage"
+import Product from './Routes/Product/Product';
+import Contact from './Routes/Contact/Contact';
+import Login from './Routes/Login/Login';
+import Profile from './Routes/Profile/Profile';
 import NotFound from './Routes/404';
 
 class App extends Component {
