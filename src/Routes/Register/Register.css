@@ -1,16 +1,17 @@
-.Login {
+.Register {
     text-align: center;
     min-height: 72vh;
     width: 100%;
     color: black;
+    background-color: slateblue;
 }
 
-.Login h1 {
+.Register h1 {
     font-size: 200px;
 }
 
 
-.Login form {
+.Register form {
     display: flex;
     flex-direction: column;
     margin-top: 300px;
@@ -21,12 +22,12 @@
     height: auto;
 }
 
-.Login h2 {
+.Register h2 {
     color: rgb(8, 8, 8);
     margin-bottom: 25px;
 }
 
-.Login form input {
+.Register form input {
     font-size: 18px;
     border: none;
     border-bottom: 1px solid grey;
@@ -41,7 +42,7 @@
     margin-bottom: 25px;
 }
 
-.Login form button {
+.Register form button {
     width: 100%;
     font-weight: bold;
     background-color: transparent;
@@ -57,11 +58,11 @@
     color: rgb(54, 54, 54);
 }
 
-.Login form button:hover {
+.Register form button:hover {
     cursor: pointer;
 }
 
-.login_bottom {
+.Register_bottom {
     display: inline-block;
     width: 100%;
 }

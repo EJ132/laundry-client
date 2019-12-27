@@ -30,8 +30,6 @@ class HomePage extends Component {
         return (
             <div>
 
-            <NavBar />
-
             <div className="Main">
                 <div className='Overlay_Homepage'>
                     <h1>Welcome to Shacker</h1>
@@ -77,10 +75,6 @@ class HomePage extends Component {
                     Once the clothes is picked up it will be weighed then taken back to a partnership laundry mat to get washed, dryed, and folded. </p>
                 </div>
             </div>
-
-            <footer className="BotFoot">
-            &#169; 2019 EJ Gonzalez
-            </footer>
 
             </div>
             

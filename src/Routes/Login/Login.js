@@ -12,7 +12,7 @@ import './Login.css';
 // Components
 import NavBar from '../../Components/NavBar'
 
-class Login extends Component {
+export default class Login extends Component {
 
     handleLogin = ev => {
         ev.preventDefault()
@@ -45,40 +45,18 @@ class Login extends Component {
 
     render () {
         return (
-            <div>
-                <div className="App-Login">
-                <NavBar />
-
-                <form className="Login" onSubmit={this.handleLogin}>
-                <h1>Existing User</h1>
-                <p htmlFor='user_name' id="Login-Placeholder1">Username</p>
-                <input type="text" name="user_name" placeholder="John123" id="input-boxes1" required></input>
-                <p htmlFor='password' id="Login-Placeholder1">Password</p>
-                <input name='password' type="password" placeholder="********" id="input-boxes1" ></input>
-                <p id="Forgot-Pass"><button id="Forgot-Btn">Forgot Password</button></p>
-                <button type='submit' id="Sign-In">Sign In</button>
+            <div className='Login'>
+                <form onSubmit={this.handleLogin}>
+                  <h2>Login</h2>
+                  <input type="text" name="user_name" placeholder="John123" required></input>
+                  <input name='password' type="password" placeholder="********"></input>
+                  <button type='submit'>Sign In</button>
+                  <section className='login_bottom'>
+                    <Link to='/forgot' id='forgot_password'>Forgot Password</Link>
+                    <Link to='/new' id='create_account'>Create Account?</Link>
+                  </section>
                 </form>
-
-                <form className="Sign-Up">
-                <h1>Sign Up</h1>
-                <p id="Login-Placeholder2">Username</p>
-                <input type="text" placeholder="John123" id="input-boxes2"></input>
-                <p id="Login-Placeholder2">Password</p>
-                <input type="text" placeholder="CookieMonster_123" id="input-boxes2"></input>
-                <p id="Login-Placeholder2">Email</p>
-                <input type="text" placeholder="John_Cook123@yahoo.com" id="input-boxes2"></input>
-                <button id="Sign-UpBtn">Sign Up</button>
-                </form>
-
-                </div>
-
-            <footer className="BotFoot">
-            &#169; 2019 EJ Gonzalez
-            </footer>
-
-            </div>
+          </div>
         );
     }
 }
-
-export default Login;
