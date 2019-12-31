@@ -1,0 +1,26 @@
+.Product_Item {
+    width: 18%;
+    height: 300px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.Product_Item img {
+    width: 100%;
+    height: 200px;
+}
+
+.Product_Item h3 {
+    padding: 5px;
+}
+
+.Product_Item p {
+    padding: 0px 0px 0px 7px;
+}
+
+.Product_Item:hover {
+    cursor: pointer;
+    width: 20%;
+    height: 310px;
+    background-color: rgba(8, 8, 8, 0.103);
+}

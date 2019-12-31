@@ -1,0 +1,122 @@
+.Dashboard {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px;
+    
+}
+
+/* LEFT SIDE OF THE DASHBOARD */
+
+.Dashboard_Left {
+    width: 50%;
+    min-height: 60vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Dashboard_Left ul {
+    list-style-type: none;
+}
+
+.Progress h2 {
+    padding: 0px 10px 10px 10px;
+}
+
+.Progress p {
+    padding: 10px;
+}
+
+.Progress_bar {
+    width: 80%;
+    background-color: rgb(219, 219, 219);
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+
+.Progress_bar div {
+    width: 200px;
+    background-color: purple;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.Most_Recent {
+    text-align: center;
+    padding: 5px;
+    margin-top: 25px;
+}
+
+.Most_Recent h2 {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    width: 275px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 15px;
+}
+
+
+.Most_Recent li {
+    background-color: silver;
+    border-bottom: 1px solid rgb(150, 150, 150);
+    padding: 10px;
+    position: relative;
+    width: 70%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Most_Recent li:hover {
+    cursor: pointer;
+    margin-bottom: 3px;
+    background-color: rgb(180, 180, 180);
+    border-bottom: 1px solid rgb(114, 114, 114);
+}
+
+.Most_Recent li img {
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    height: 90%;
+}
+
+#notepad {
+    right: 52px;
+}
+
+/* RIGHT SIDE OF THE DASHBOARD */
+
+.Dashboard_Right {
+    text-align: center;
+    width: 50%;
+    min-height: 60vh;
+    background-color: rgb(8, 8, 8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Dashboard_Right h2 {
+    font-size: 2rem;
+    padding: 4px;
+    border-bottom: 2px solid gold;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Dashboard_Right p {
+    font-size: 16px;
+    padding: 4px;
+}

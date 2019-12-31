@@ -1,21 +1,49 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import NavBar from '../../Components/NavBar';
-import Person from '../../Components/Max';
+
+// Assets
+import DashboardIcon from '../../Assets/home.png'
+import ProfileIcon from '../../Assets/profile.png'
+import DebitCard from '../../Assets/debitcard.png'
+import SettingsIcon from '../../Assets/settings.png'
+
+// Components
+import Dashboard from '../../Components/Dashboard/Dashboard';
+import Personal from '../../Components/Personal/Personal';
+import Transactions from '../../Components/Transactions/Transactions';
+import Settings from '../../Components/Settings/Settings';
 
 
 // Style Sheets
 import './Profile.css'
 
 class Profile extends Component {
+
+    state = {
+        currentPage: 'Dashboard'
+    }
+
+    changeCurrentPage = newPage => {
+
+        this.setState({
+            currentPage: newPage
+        })
+
+    }
+
     render () {
         return (
-            <div>
+            <div className="Profile">
                 <NavBar />
                 <div className='profile_container'>
-                    <Person name={"Max"} age={19} height={70} color={"purple"} cat={"draco"}/>
-                    <Person name={"EJ"} age={19} height={74} color={"black"} dog={"blue"}/>
+                    <img alt="dashboard" src={DashboardIcon} onClick={() => this.changeCurrentPage("Dashboard")}/>
+                    <img alt="personal info" src={ProfileIcon} onClick={() => this.changeCurrentPage("Personal")}/>
+                    <img alt="transactions" src={DebitCard} onClick={() => this.changeCurrentPage("Transactions")}/>
+                    <img alt="settings" src={SettingsIcon} onClick={() => this.changeCurrentPage("Settings")}/>
                 </div>
+
+                <Dashboard />
+
             </div>
         );
     }

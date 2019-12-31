@@ -1,0 +1,58 @@
+.Settings {
+    min-height: 75vh;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Settings h2 {
+    font-size: 2rem;
+}
+
+.Settings_List {
+    width: 40%;
+    min-width: 400px;
+    min-height: 65vh;
+    background-color: rgb(63, 63, 63);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Settings_List > section {
+    display: flex;
+    flex-direction: column;
+}
+
+.Settings_List section input {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    margin-top: 15px;
+}
+
+.Settings_List section p {
+    padding: 16px;
+    color: white;
+    margin-bottom: -15px;
+}
+
+.Settings_List p {
+    padding: 16px;
+    color: white;
+}
+
+.Settings_List p:hover {
+    cursor: pointer;
+    background-color: slateblue;
+}
+

@@ -1,14 +1,126 @@
 .Contact {
-    vertical-align: center;
-    float: center;
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    min-height: 95vh;
+    margin-top: 80px;
 }
 
-#contact-label {
-    font-size: 50px;
-    opacity: 1;
-    color: rgba(#FFFFFF, 1);
-    text-decoration: bold;
-    transform: translateY(70px);
+.Contact_header {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.Contact_header h3 {
+    color: purple;
+    padding: 6px;
+}
+
+.Contact_header h1 {
+    font-size: 3rem;
+}
+
+.Contact_header p {
+    padding: 5px;
+    font-size: 18px;
+    width: 35%;
+    line-height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Contact_Section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100% !important;
+    min-height: 75vh;
+    margin-bottom: 100px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 0px;
+}
+
+.Contact_Section form {
+    color: white;
+    background-color: rgb(8, 8, 8);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    min-height: 75vh;
+}
+
+.Contact_Section form label {
+    text-align: left;
+    font-size: 1.3rem;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+}
+
+.Contact_Section form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    color: white;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-bottom: 5px;
+    
+}
+
+.Contact_Section form input::placeholder {
+    color: rgb(185, 185, 185);
+}
+
+.Contact_Section form label, .Contact_Section form input, .Contact_Section form button, .Contact_Section form textarea {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Contact_Section form button {
+    margin-top: 10px;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+.Contact_Section form textarea {
+    min-height: 100px;
+    max-height: 150px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.Contact_Section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 25px
+}
+
+.Contact_Section div h2 {
+    font-size: 34px;
+    padding: 6px;
+}
+
+.Contact_Section div h3 {
+    font-size: 20px;
+    padding: 6px;
+}
+
+.Contact_Section div p {
+    font-size: 16px;
+    padding: 6px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 25px;
 }

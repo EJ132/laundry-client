@@ -9,8 +9,9 @@ import config from '../../config'
 // Style Sheets
 import './Login.css';
 
-// Components
-import NavBar from '../../Components/NavBar'
+// History
+import history from 'history'
+
 
 export default class Login extends Component {
 
@@ -26,17 +27,18 @@ export default class Login extends Component {
             user_name.value = ''
             password.value = ''
             TokenService.saveAuthToken(res.authToken)
-            fetch(`${config.API_ENDPOINT}/profile/${TokenService.getUserName()}`, {
-              headers: {'authorization': `bearer ${TokenService.getAuthToken()}`},})
-                .then(res =>
-                    (!res.ok)
-                        ? res.json().then(e => Promise.reject(e))
-                        : res.json()
-                )
-                .then(resJSON => {
-                  TokenService.saveUserId(resJSON.id)})
-            // history.push('/')
-            console.log(res)
+            this.props.history.push('/')
+            // fetch(`${config.API_ENDPOINT}/users/${TokenService.getUserName()}`, {
+            //   headers: {'authorization': `bearer ${TokenService.getAuthToken()}`},})
+            //     .then(res =>
+            //         (!res.ok)
+            //             ? res.json().then(e => Promise.reject(e))
+            //             : res.json()
+            //     )
+            //     .then(resJSON => {
+            //       TokenService.saveUserId(resJSON.id)})
+            // // history.push('/')
+            // console.log(res)
           })
           .catch(res => {
             this.setState({ error: res.error })

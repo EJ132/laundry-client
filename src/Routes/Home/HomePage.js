@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
 
 // Style Sheets
-import './App.css';
 import './LearnMoreButton.css';
 import './StartNowButton.css';
 import './SecondPage.css';
@@ -14,12 +12,27 @@ import Order from '../../Assets/Order.svg';
 import Wash from '../../Assets/Wash.svg';
 import Deliver from '../../Assets/Deliver.svg';
 
-// Components
-import NavBar from '../../Components/NavBar'
+// Token Service
+import TokenService from '../../services/token-service'
+
+// History
+import history from '../../Context/history'
+
+// Redirect
+import {Redirect, Link} from 'react-router-dom'
 
 
 
 class HomePage extends Component {
+    
+
+    startNow = () => {
+        if(TokenService.getAuthToken()){
+            this.props.history.push('/Product')
+        } else {
+            this.props.history.push('/Login')
+        }
+    }
 
     render () {
 
@@ -34,7 +47,7 @@ class HomePage extends Component {
                 <div className='Overlay_Homepage'>
                     <h1>Welcome to Shacker</h1>
                     <h2>The best laundry service at your door.</h2>
-                    <button className="Start-Button"><span>Start Now</span></button>
+                    <button className="Start-Button" onClick={this.startNow}><span>Start Now</span></button>
                     <button className="Learn-Button" onClick={FourthPg}><span>Learn More</span></button>
                 </div>
             </div>

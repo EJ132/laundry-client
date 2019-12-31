@@ -1,19 +1,20 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React, {Component} from 'react';
+
+// Stlye Sheets
 import './Register.css'
 
-export default class Register extends React.Component{
+export default class Register extends Component{
     render(){
         return (
             <div className='Register'>
-                <h2>Login</h2>
-                <input type="text" name="user_name" placeholder="John123" required></input>
-                <input name='password' type="password" placeholder="********"></input>
-                <button type='submit'>Sign In</button>
-                <section className='login_bottom'>
-                    <Link to='/forgot' id='forgot_password'>Forgot Password</Link>
-                    <Link to='/new' id='create_account'>Create Account?</Link>
-                </section>
+                <form>
+                    <h2>Sign Up</h2>
+                    <input name="Full_Name" type="text" placeholder='Full Name' required></input>
+                    <input name="email" type="text" placeholder="google@gmail.com" required></input>
+                    <input type="text" name="user_name" placeholder="User Name" required></input>
+                    <input name='password' type="password" placeholder="********"></input>
+                    <button type='submit'>Sign Up</button>
+                </form>
             </div>
         )
     }

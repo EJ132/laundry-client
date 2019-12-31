@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'; 
-import './Routes/Home/App.css';
-
+import './App.css';
 import HomePage from "./Routes/Home/HomePage"
 import Product from './Routes/Product/Product';
 import Contact from './Routes/Contact/Contact';
@@ -16,20 +15,23 @@ import NavBar from './Components/NavBar'
 import PublicOnlyRoute from './Utils/PublicOnlyRoute'
 import PrivateOnlyRoute from './Utils/PrivateRoute'
 
+// Context
+import history from './Context/history'
+
 class App extends Component {
   render () {
     return (
-      <Router>
+      <Router history={history}>
         <NavBar />
         <Switch>
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/404" component={NotFound}/>
         <Route exact path="/Contact" component={Contact}/>
-        <PublicOnlyRoute exact path="/Login" component={Login}/>
+        <PublicOnlyRoute exact path="/login" component={Login}/>
         <Route exact path='/new' component={Register}/>
         <Route exact path='/forgot' component={Forgot_Password}/>
         <Route exact path="/Product" component={Product}/>
-        <PrivateOnlyRoute exact path="/Profile" component={Profile}/>
+        <PrivateOnlyRoute exact path="/profile" component={Profile}/>
         <Redirect to="/404"/>
         </Switch>
         <footer className="BotFoot"> &#169; 2019 EJ Gonzalez</footer>

@@ -1,19 +1,40 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import '../Home/App.css';
 import './Contact.css';
 import NavBar from '../../Components/NavBar';
 
 class Contact extends Component {
     render () {
         return (
-            <div>
+            <div className="Contact">
 
-            <NavBar />
+                <NavBar />
 
-            <footer className="BotFoot">
-            &#169; 2019 EJ Gonzalez
-            </footer>
+                <div className="Contact_header">
+                    <h3>GOT A QUESTION?</h3>
+                    <h1>Contact Shacker</h1>
+                    <p>We are here to help and answer any questions you might have. We look forward to hearing from you!</p>
+                </div>
+
+                <div className='Contact_Section'>
+                    <form>
+                        <label>Name</label>
+                        <input placeholder='Shaker Shacker'></input>
+                        <label>Email</label>
+                        <input placeholder='shacker123@gmail.com'></input>
+                        <label>Message</label>
+                        <textarea placeholder='We will get back you shortly :)'></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div>
+                        <h2>How can we help?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                            ut labore et dolore magna aliqua. Lorem mollis aliquam ut porttitor.</p>
+                        <h3>Need help ordering?</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                            ut labore et dolore magna aliqua. Rhoncus aenean vel elit scelerisque mauris pellentesque 
+                            pulvinar pellentesque habitant.</p>
+                    </div>
+                </div>
             </div>
         );
     }

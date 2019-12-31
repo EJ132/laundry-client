@@ -1,17 +1,28 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 
-export default function Forgot_Password(){
-    return (
-        <form>
-            <h2>Forgot</h2>
-            <input type="text" name="user_name" placeholder="John123" required></input>
-            <input name='password' type="password" placeholder="********"></input>
-            <button type='submit'>Sign In</button>
-            <section className='login_bottom'>
-            <Link to='/forgot' id='forgot_password'>Forgot Password</Link>
-            <Link to='/new' id='create_account'>Create Account?</Link>
-            </section>
-        </form>
-    )
+// Stlye Sheets
+import './Forgot_Password.css'
+
+export default class Forgot_Password extends React.Component{
+
+    state = {
+        sending: null
+    }
+
+    render(){
+        return (
+            <div className='Forgot_Page'>
+                <form>
+                    <div>
+                        <h2>Forgot Password?</h2>
+                        {this.state.sending ? '<p>Email was just sent... please wait 30 seconds</p>' : null}
+                        <input placeholder='enter email'></input>
+                        <button type='submit'>Send</button>
+                    </div>
+                    <div id='Forgot_Page_Right'>
+                    </div>
+                </form>
+            </div>
+        )
+    }
 }
