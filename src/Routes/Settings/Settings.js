@@ -1,12 +1,17 @@
 import React from 'react'
 
 // Style Sheets
-
 import './Settings.css'
+
+// Components
+import NavBar from '../../Components/NavBar'
+import ProfileContainer from '../../Components/Profile-Container'
 
 export default function Settings(props){
     return (
         <div className="Settings">
+            <ProfileContainer />
+            
             <h2>Settings</h2>
             <div className="Settings_List">
                 <div>

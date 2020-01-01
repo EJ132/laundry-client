@@ -9,40 +9,21 @@ import config from '../../config'
 // Style Sheets
 import './Login.css';
 
-// History
-import history from 'history'
+// Context
+import history from '../../Context/history';
+import UserContext from '../../Context/Context'
 
 
 export default class Login extends Component {
 
+    static contextType = UserContext;
+
     handleLogin = ev => {
-        ev.preventDefault()
-        const { user_name, password } = ev.target
-        AuthApi.postLogin({
-          user_name: user_name.value,
-          password: password.value,
-        })
-        .then(res => {
-            TokenService.saveUserName(user_name.value)
-            user_name.value = ''
-            password.value = ''
-            TokenService.saveAuthToken(res.authToken)
-            this.props.history.push('/')
-            // fetch(`${config.API_ENDPOINT}/users/${TokenService.getUserName()}`, {
-            //   headers: {'authorization': `bearer ${TokenService.getAuthToken()}`},})
-            //     .then(res =>
-            //         (!res.ok)
-            //             ? res.json().then(e => Promise.reject(e))
-            //             : res.json()
-            //     )
-            //     .then(resJSON => {
-            //       TokenService.saveUserId(resJSON.id)})
-            // // history.push('/')
-            // console.log(res)
-          })
-          .catch(res => {
-            this.setState({ error: res.error })
-          })
+      ev.preventDefault()
+      const { user_name, password } = ev.target;
+
+      this.context.processLogin(user_name.value, password.value);
+
     }
 
     render () {

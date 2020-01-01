@@ -1,0 +1,50 @@
+.Personal {
+    min-height: 95vh;
+}
+
+.Personal h2 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.Personal_Info {
+    width: 60%;
+    min-height: 70vh;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.Personal_Info section {
+    display: flex;
+    width: 100%;
+}
+
+.Personal_Info button {
+    width: 100px;
+    height: 30px;
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: 25px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.Personal_Info button:hover {
+    cursor: pointer;
+}
+
+.Personal_Info span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Personal_Info p {
+    padding: 12px;
+    font-size: 16px;
+}

@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
-import NavBar from '../../Components/NavBar';
-
-// Assets
-import DashboardIcon from '../../Assets/home.png'
-import ProfileIcon from '../../Assets/profile.png'
-import DebitCard from '../../Assets/debitcard.png'
-import SettingsIcon from '../../Assets/settings.png'
 
 // Components
-import Dashboard from '../../Components/Dashboard/Dashboard';
-import Personal from '../../Components/Personal/Personal';
-import Transactions from '../../Components/Transactions/Transactions';
-import Settings from '../../Components/Settings/Settings';
+import Dashboard from '../Dashboard/Dashboard';
+import ProfileContainer from '../../Components/Profile-Container'
+import NavBar from '../../Components/NavBar'
 
 
 // Style Sheets
 import './Profile.css'
 
+
+// Service
+import TokenService from '../../services/token-service'
+
+
+// Context
+import UserContext from '../../Context/Context'
+
 class Profile extends Component {
 
-    state = {
-        currentPage: 'Dashboard'
-    }
+    static contextType = UserContext;
 
     changeCurrentPage = newPage => {
 
@@ -32,15 +30,11 @@ class Profile extends Component {
     }
 
     render () {
+        console.log(this.context)
         return (
             <div className="Profile">
                 <NavBar />
-                <div className='profile_container'>
-                    <img alt="dashboard" src={DashboardIcon} onClick={() => this.changeCurrentPage("Dashboard")}/>
-                    <img alt="personal info" src={ProfileIcon} onClick={() => this.changeCurrentPage("Personal")}/>
-                    <img alt="transactions" src={DebitCard} onClick={() => this.changeCurrentPage("Transactions")}/>
-                    <img alt="settings" src={SettingsIcon} onClick={() => this.changeCurrentPage("Settings")}/>
-                </div>
+                <ProfileContainer />
 
                 <Dashboard />
 

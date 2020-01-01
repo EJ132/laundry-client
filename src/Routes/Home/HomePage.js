@@ -20,6 +20,7 @@ import history from '../../Context/history'
 
 // Redirect
 import {Redirect, Link} from 'react-router-dom'
+import NavBar from '../../Components/NavBar';
 
 
 
@@ -42,6 +43,8 @@ class HomePage extends Component {
 
         return (
             <div>
+
+            <NavBar />
 
             <div className="Main">
                 <div className='Overlay_Homepage'>
