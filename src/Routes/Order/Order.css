@@ -1,0 +1,73 @@
+.Order {
+    margin-top: 80px;
+    min-height: 92vh;
+}
+
+.Order form {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Order h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.Order form div {
+    margin-top: 10px;
+    position: relative;
+    border-bottom: 1px solid black;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.8s ease all;
+}
+
+.Order form div input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 1;
+}
+
+.Order form div input:hover {
+    cursor: pointer;
+}
+
+.Order form div:hover {
+    cursor: pointer;
+    background-color: rgb(8, 8, 8);
+    color: white;
+}
+
+.Order form div label {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.Order form div label:hover {
+    cursor: pointer;
+}
+
+.Order form button {
+    border: 1px solid grey;
+    margin-top: 10px;
+    height: 30px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s ease all;
+}
+
+.Order form button:hover {
+    cursor: pointer;
+    background-color: rgb(194, 194, 194);
+    border: 1px solid grey;
+}

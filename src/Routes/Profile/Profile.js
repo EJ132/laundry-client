@@ -22,21 +22,22 @@ class Profile extends Component {
     static contextType = UserContext;
 
     changeCurrentPage = newPage => {
-
         this.setState({
             currentPage: newPage
         })
+    }
 
+    componentWillMount(){
+        this.context.getUserInfo()
     }
 
     render () {
-        console.log(this.context)
         return (
             <div className="Profile">
                 <NavBar />
                 <ProfileContainer />
 
-                <Dashboard />
+                <Dashboard fullname={this.context.user.fullname}/>
 
             </div>
         );

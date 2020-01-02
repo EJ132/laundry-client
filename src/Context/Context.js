@@ -9,7 +9,10 @@ import history from './history'
 
 const UserContext = React.createContext({
     user: {},
-    setUser: () => {}
+    processLogin: () => {},
+    getUserInfo: () => {},
+    setUser: () => {},
+    nextStep: () => {},
 })
 
 export default UserContext;
@@ -18,28 +21,70 @@ export class UserProvider extends Component {
     constructor(props) {
         super(props)
         const state = {
-            user: {}
+            user: '',
+            currentStep: 1,
         }
 
         this.state = state;
     }
 
-    processLogin = (user_name, password) => {
-        console.log(user_name)
+    processLogin = async (user_name, password) => {
+
         let credentials = {user_name, password};
-        AuthApi.postLogin(credentials).then(resJSON => {
+        await AuthApi.postLogin(credentials).then(resJSON => {
             TokenService.saveUserName(user_name);
             TokenService.saveAuthToken(resJSON.authToken);
-            history.push('/profile/dashboard')
-            console.log(resJSON);
+            history.push('/profile/dashboard');
+
             }
         )
+
+        await this.getUserInfo()
+    }
+
+    getUserInfo = async () => {
+        let username = TokenService.getUserName();
+        let data;
+        await AuthApi.UserInfo(username).then(resJSON => {
+            data = resJSON
+        })
+        return this.setUser(data)
+    }
+
+    setUser = user => {
+        if(this.state.user === ''){
+            this.setState({
+                user: user
+            })
+        }
+    }
+
+    nextStep = () => {
+
+        if(this.state.currentStep === 7){
+            return
+        }
+
+        this.setState({
+            currentStep: this.state.currentStep + 1
+        })
+    }
+
+    previousStep = () => {
+        this.setState({
+            currentStep: this.state.currentStep - 1
+        })
     }
 
     render(){
         const value = {
             user: this.state.user,
-            processLogin: this.processLogin
+            currentStep: this.state.currentStep,
+            processLogin: this.processLogin,
+            getUserInfo: this.getUserInfo,
+            setUser: this.setUser,
+            nextStep: this.nextStep,
+            previousStep: this.previousStep,
         }
         return (
             <UserContext.Provider value={value}>

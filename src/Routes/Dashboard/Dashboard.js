@@ -8,7 +8,7 @@ import money from '../../Assets/money.png';
 import notepad from '../../Assets/notepad.png';
 
 export default function Dashboard(props){
-    console.log(props)
+
     return (
         <div className="Dashboard">
             <div className='Dashboard_Left'>
@@ -43,7 +43,7 @@ export default function Dashboard(props){
             </div>
             <div className="Dashboard_Right">
                 <section>
-                    <h2>{props.className}</h2>
+                    <h2>{props.fullname}</h2>
                     <p>Member since: January 1, 2020</p>
                     <p>Loads Washed: 12</p>
                 </section>

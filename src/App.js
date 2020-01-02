@@ -13,6 +13,7 @@ import Register from './Routes/Register/Register.js';
 import Forgot_Password from './Routes/Forgot_Password/Forgot_Password';
 import NotFound from './Routes/404';
 import NavBar from './Components/NavBar'
+import Order from './Routes/Order/Order';
 
 // Private and Public Routes
 import PublicOnlyRoute from './Utils/PublicOnlyRoute'
@@ -23,11 +24,18 @@ import UserContext from './Context/Context'
 
 // History
 import history from './Context/history'
+import TokenService from './services/token-service';
 
 
 class App extends Component {
 
   static contextType = UserContext;
+
+  componentWillUpdate(){
+    if(TokenService.hasAuthToken()){
+      this.context.getUserInfo()
+    }
+  }
 
   render () {
     return (
@@ -45,6 +53,7 @@ class App extends Component {
         <PrivateOnlyRoute exact path="/profile/personal" component={Personal}/>
         <PrivateOnlyRoute exact path="/profile/billing" component={Transactions}/>
         <PrivateOnlyRoute exact path="/profile/settings" component={Settings}/>
+        <PrivateOnlyRoute exact path='/order' component={Order}/>
         <Redirect to="/404"/>
         </Switch>
         <footer className="BotFoot"> &#169; 2019 EJ Gonzalez</footer>
