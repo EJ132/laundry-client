@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 
 // Style Sheet
-import './Order.css'
+import './Step1.css'
 
 // Components
 import FormProgress from '../../Components/FormProgress/FormProgress'
 
 // Context 
 import UserContext from '../../Context/Context'
+import history from '../../Context/history'
+import TokenService from '../../services/token-service'
 
 export default class Order extends Component {
 
@@ -18,6 +20,16 @@ export default class Order extends Component {
         step: 1
     }
 
+    componentWillMount(){
+
+        if(TokenService.getStep1() !== null){
+            this.setState({
+                checked: TokenService.getStep1()
+            })
+        }
+        
+    }
+
     checker = value => {
         this.setState({
             checked: value
@@ -26,9 +38,13 @@ export default class Order extends Component {
 
     stepOne = ev => {
         ev.preventDefault()
+        console.log(this.state.checked)
+        TokenService.saveStep1(`${this.state.checked}`)
         this.setState({
             checked: null
         })
+        this.nextStep()
+        history.push('/order/2')
     }
 
     nextStep = () => {
@@ -50,8 +66,7 @@ export default class Order extends Component {
     render(){
         return (
             <div className="Order">
-                <FormProgress step={this.state.step}/>
-                <h1>{this.context.currentStep}</h1>
+                <FormProgress step={this.props.match.url}/>
                 <form onSubmit={this.stepOne}>
                     <h3>Kind of load?</h3>
                     <div>
@@ -82,10 +97,10 @@ export default class Order extends Component {
                         ></input>
                         <label htmlFor="both" >Both</label>
                     </div>
-                    <div>
+                    <section>
                         {this.state.step === 1 ? null : <button onClick={this.previousStep}>Back</button>}
-                        {this.state.step === 7 ? <button type="submit">Submit</button> : <button onClick={this.nextStep}>Next</button>}
-                    </div>
+                        {this.state.step === 7 ? <button type="submit">Submit</button> : <button type="submit">Next</button>}
+                    </section>
                 </form>
             </div>
         )

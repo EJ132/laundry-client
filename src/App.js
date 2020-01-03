@@ -13,7 +13,14 @@ import Register from './Routes/Register/Register.js';
 import Forgot_Password from './Routes/Forgot_Password/Forgot_Password';
 import NotFound from './Routes/404';
 import NavBar from './Components/NavBar'
-import Order from './Routes/Order/Order';
+import Step1 from './Routes/Order/Step1';
+import Step2 from './Routes/Order/Step2';
+import Step3 from './Routes/Order/Step3';
+import Step4 from './Routes/Order/Step4';
+import Step5 from './Routes/Order/Step5';
+import Step6 from './Routes/Order/Step6';
+import Step7 from './Routes/Order/Step7';
+
 
 // Private and Public Routes
 import PublicOnlyRoute from './Utils/PublicOnlyRoute'
@@ -25,6 +32,7 @@ import UserContext from './Context/Context'
 // History
 import history from './Context/history'
 import TokenService from './services/token-service';
+
 
 
 class App extends Component {
@@ -53,7 +61,13 @@ class App extends Component {
         <PrivateOnlyRoute exact path="/profile/personal" component={Personal}/>
         <PrivateOnlyRoute exact path="/profile/billing" component={Transactions}/>
         <PrivateOnlyRoute exact path="/profile/settings" component={Settings}/>
-        <PrivateOnlyRoute exact path='/order' component={Order}/>
+        <PrivateOnlyRoute exact path='/order/1' component={Step1}/>
+        <PrivateOnlyRoute exact path='/order/2' component={Step2}/>
+        <PrivateOnlyRoute exact path='/order/3' component={Step3}/>
+        <PrivateOnlyRoute exact path='/order/4' component={Step4}/>
+        <PrivateOnlyRoute exact path='/order/5' component={Step5}/>
+        <PrivateOnlyRoute exact path='/order/6' component={Step6}/>
+        <PrivateOnlyRoute exact path='/order/7' component={Step7}/>
         <Redirect to="/404"/>
         </Switch>
         <footer className="BotFoot"> &#169; 2019 EJ Gonzalez</footer>

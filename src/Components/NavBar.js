@@ -33,7 +33,7 @@ export default class NavBar extends React.Component {
                 {TokenService.getAuthToken() ? <Link to="/profile/dashboard">Profile</Link> : null}
                 <Link to="/Contact">Contact</Link>
                 <Link to="/Product">Products</Link>
-                {TokenService.getAuthToken() ? <Link to='/order'>Order</Link> : null}
+                {TokenService.getAuthToken() ? <Link to='/order/1'>Order</Link> : null}
                 <Link id='Nav_Header' to="/"><header>SHACKER</header></Link>
             </div>
         )

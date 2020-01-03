@@ -1,0 +1,68 @@
+.Step2 {
+    min-height: 95vh;
+}
+
+.Step2 form {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Step2 form div {
+    margin-top: 10px;
+    position: relative;
+    border-bottom: 1px solid black;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.8s ease all;
+}
+
+#wash_special {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+.Step2 form div input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 1;
+}
+
+.Step2 form div input:hover {
+    cursor: pointer;
+}
+
+.Step2 form div label {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.Step2 form div label:hover {
+    cursor: pointer;
+}
+
+.Step2 form button {
+    border: 1px solid grey;
+    margin-top: 10px;
+    height: 30px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s ease all;
+}
+
+.Step2 form button:hover {
+    cursor: pointer;
+    background-color: rgb(194, 194, 194);
+    border: 1px solid grey;
+}

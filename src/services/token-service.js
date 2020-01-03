@@ -10,6 +10,45 @@ const TokenService = {
   saveUserId(user_id){
     window.localStorage.setItem(config.USER_ID, user_id)
   },
+  saveStep1(instructions){
+    window.localStorage.setItem(config.STEP1, instructions)
+  },
+  saveStep2(instructions){
+    window.localStorage.setItem(config.STEP2, instructions)
+  },
+  saveStep3(instructions){
+    window.localStorage.setItem(config.STEP3, instructions)
+  },
+  saveStep4(instructions){
+    window.localStorage.setItem(config.STEP4, instructions)
+  },
+  saveStep5(instructions){
+    window.localStorage.setItem(config.STEP5, instructions)
+  },
+  getStep1(){
+    return window.localStorage.getItem(config.STEP1)
+  },
+  getStep2(){
+    return window.localStorage.getItem(config.STEP2)
+  },
+  getStep3(){
+    return window.localStorage.getItem(config.STEP3)
+  },
+  getStep4(){
+    return window.localStorage.getItem(config.STEP4)
+  },
+  getStep5(){
+    return window.localStorage.getItem(config.STEP5)
+  },
+  getAllSteps(){
+    const allSteps = [];
+    allSteps.push(window.localStorage.getItem(config.STEP1))
+    allSteps.push(window.localStorage.getItem(config.STEP2))
+    allSteps.push(window.localStorage.getItem(config.STEP3))
+    allSteps.push(window.localStorage.getItem(config.STEP4))
+    allSteps.push(window.localStorage.getItem(config.STEP5))
+    return allSteps;
+  },
   getAuthToken() {
     return window.localStorage.getItem(config.TOKEN_KEY)
   },

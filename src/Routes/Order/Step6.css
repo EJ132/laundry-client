@@ -1,0 +1,55 @@
+.Checkout {
+    margin-top: 80px;
+    min-height: 92vh;
+}
+
+.Checkout h1 {
+    text-align: center;
+    margin-top: 2%;
+}
+
+#Checkout_Box {
+    width: 80%;
+    min-height: 80vh;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    display: flex;
+    padding: 25px;
+}
+
+#Checkout_Box div {
+    width: 50%;
+    color: white;
+}
+
+.Checkout_Details section {
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Checkout_Details section h2 {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.Checkout_Details section p {
+    text-align: left;
+    font-size: .75rem;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.Checkout_Price {
+    text-align: center;
+}
+
+.Checkout_Details div {
+    background-color: cornflowerblue;
+}

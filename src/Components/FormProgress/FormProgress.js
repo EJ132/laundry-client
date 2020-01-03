@@ -16,14 +16,14 @@ export default class FormProgress extends Component {
     }
 
     componentDidMount(){
-       if(document.getElementById(`step${this.props.step}`)){
-        document.getElementById(`step${this.props.step}`).style.backgroundColor = 'blue';
+       if(document.getElementById(`${this.props.step}`)){
+        document.getElementById(`${this.props.step}`).style.backgroundColor = 'blue';
        }
     }
 
     componentWillReceiveProps(){
-        if(document.getElementById(`step${this.props.step}`)){
-            document.getElementById(`step${this.props.step}`).style.backgroundColor = 'blue';
+        if(document.getElementById(`${this.props.step}`)){
+            document.getElementById(`${this.props.step}`).style.backgroundColor = 'blue';
         }
     }
 
@@ -31,13 +31,13 @@ export default class FormProgress extends Component {
     render(){
         return (
             <div className="FormProgress_Bar">
-                <div id="step1"></div>
-                <div id="step2"></div>
-                <div id="step3"></div>
-                <div id="step4"></div>
-                <div id="step5"></div>
-                <div id="step6"></div>
-                <div id="step7"></div>
+                <div id="/order/1"></div>
+                <div id="/order/2"></div>
+                <div id="/order/3"></div>
+                <div id="/order/4"></div>
+                <div id="/order/5"></div>
+                <div id="/order/6"></div>
+                <div id="/order/7"></div>
             </div>
         )
     }

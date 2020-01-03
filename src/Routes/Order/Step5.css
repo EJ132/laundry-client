@@ -1,0 +1,67 @@
+.Step5 {
+    min-height: 95vh;
+}
+
+.Step5 form {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Step5 form div {
+    margin-top: 10px;
+    position: relative;
+    border-bottom: 1px solid black;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.8s ease all;
+}
+
+.Step5 form div input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 1;
+}
+
+.Step5 form div input:hover {
+    cursor: pointer;
+}
+
+.Step5 form div label {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.Step5 form div label:hover {
+    cursor: pointer;
+}
+
+.Step5 form button {
+    border: 1px solid grey;
+    margin-top: 10px;
+    height: 30px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s ease all;
+}
+
+.Step5 form button:hover {
+    cursor: pointer;
+    background-color: rgb(194, 194, 194);
+    border: 1px solid grey;
+}
+
+.Step5 form div span {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
