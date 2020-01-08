@@ -1,3 +1,5 @@
+/* CHECKOUT */
+
 .Checkout {
     margin-top: 80px;
     min-height: 92vh;
@@ -7,6 +9,34 @@
     text-align: center;
     margin-top: 2%;
 }
+
+/* CHECKOUT BUTTONS */
+
+#Checkout_Buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#Checkout_Buttons button {
+    width: 150px;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    transition: 1s ease all;
+}
+
+#Checkout_Buttons button:hover {
+    cursor: pointer;
+    border: 1px solid gold;
+    color: gold;
+}
+
+/* CHECKOUT DETAILS SECTION */
 
 #Checkout_Box {
     width: 80%;
@@ -19,11 +49,17 @@
     border-radius: 10px;
     display: flex;
     padding: 25px;
+    position: relative;
 }
 
 #Checkout_Box div {
-    width: 50%;
     color: white;
+}
+
+.Checkout_Details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .Checkout_Details section {
@@ -32,6 +68,15 @@
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+}
+
+#Checkout_Details_Header {
+    font-size: 2rem;
+    border-bottom: 1px solid gold;
+    text-align: center;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Checkout_Details section h2 {
@@ -46,10 +91,73 @@
     padding-top: 1%;
 }
 
-.Checkout_Price {
-    text-align: center;
+
+/* BILLING CHECKOUT */
+
+#Billing_Checkout {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-.Checkout_Details div {
-    background-color: cornflowerblue;
+#Billing_Checkout h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gold;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Billing_Checkout label {
+    font-size: 14px;
+    display: flex;
+}
+
+#Billing_Checkout input {
+    justify-content: left;
+    width: 50%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    border-radius: 5px;
+    padding-inline-start: 5px;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
+}
+
+
+/* CHECKOUT SUMMARY */
+
+.Checkout_Price {
+    text-align: center;
+    width: 50%;
+}
+
+.Checkout_Price h2 {
+    font-size: 2rem;
+    padding: 6px;
+    width: 35%;
+    border-bottom: 1px solid gold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#final_price {
+    text-align: right;
+    color: gold;
+    margin-right: 5%;
+}
+
+#final_price span {
+    color: white;
+}
+
+/* CHECKOUT ERROR */
+
+#Checkout_Error {
+    color: red;
 }

@@ -17,13 +17,13 @@ export default class FormProgress extends Component {
 
     componentDidMount(){
        if(document.getElementById(`${this.props.step}`)){
-        document.getElementById(`${this.props.step}`).style.backgroundColor = 'blue';
+        document.getElementById(`${this.props.step}`).style.backgroundColor = 'gold';
        }
     }
 
     componentWillReceiveProps(){
         if(document.getElementById(`${this.props.step}`)){
-            document.getElementById(`${this.props.step}`).style.backgroundColor = 'blue';
+            document.getElementById(`${this.props.step}`).style.backgroundColor = 'gold';
         }
     }
 

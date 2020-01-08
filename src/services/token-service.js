@@ -67,6 +67,13 @@ const TokenService = {
   clearUserId() {
     window.localStorage.removeItem(config.USER_ID)
   },
+  clearAllSteps(){
+    window.localStorage.removeItem(config.STEP1)
+    window.localStorage.removeItem(config.STEP2)
+    window.localStorage.removeItem(config.STEP3)
+    window.localStorage.removeItem(config.STEP4)
+    window.localStorage.removeItem(config.STEP5)
+  },
   hasAuthToken() {
     return !!TokenService.getAuthToken()
   },

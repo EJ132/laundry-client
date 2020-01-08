@@ -19,7 +19,7 @@ import Step3 from './Routes/Order/Step3';
 import Step4 from './Routes/Order/Step4';
 import Step5 from './Routes/Order/Step5';
 import Step6 from './Routes/Order/Step6';
-import Step7 from './Routes/Order/Step7';
+import Confirmation from './Routes/Order/Confirmation';
 
 
 // Private and Public Routes
@@ -67,7 +67,7 @@ class App extends Component {
         <PrivateOnlyRoute exact path='/order/4' component={Step4}/>
         <PrivateOnlyRoute exact path='/order/5' component={Step5}/>
         <PrivateOnlyRoute exact path='/order/6' component={Step6}/>
-        <PrivateOnlyRoute exact path='/order/7' component={Step7}/>
+        <PrivateOnlyRoute exact path='/order/confimation' component={Confirmation}/>
         <Redirect to="/404"/>
         </Switch>
         <footer className="BotFoot"> &#169; 2019 EJ Gonzalez</footer>
