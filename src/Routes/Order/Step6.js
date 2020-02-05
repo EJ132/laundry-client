@@ -27,7 +27,19 @@ export default class Step6 extends Component {
         })
     }
 
-    CompleteOrder = () => {
+    CompleteOrder = ev => {
+
+        ev.preventDefault();
+
+        const { street, city, state, zipcode,card_name, card_number, card_date, card_code } = ev.target;
+        console.log(street.value)
+        console.log(city.value)
+        console.log(state.value)
+        console.log(zipcode.value)
+        console.log(card_name.value)
+        console.log(card_number.value)
+        console.log(card_date.value)
+        console.log(card_code.value)
 
         let allsteps = TokenService.getAllSteps();
         console.log(allsteps);
@@ -38,6 +50,8 @@ export default class Step6 extends Component {
                 })
             }
         }
+
+        setTimeout()
 
         TokenService.clearAllSteps()
         history.push('/order/confimation');
@@ -52,7 +66,7 @@ export default class Step6 extends Component {
             <div className="Checkout">
                 <FormProgress step={this.props.match.url}/>
                 <h1>Checkout</h1>
-                <div id="Checkout_Box">
+                <form id="Checkout_Box" onSubmit={this.CompleteOrder}>
                     <div className="Checkout_Details">
                         <div>
                             <section>
@@ -81,16 +95,30 @@ export default class Step6 extends Component {
                         <div>
                             <section id="Billing_Checkout">
                                 <h2>Billing</h2>
-                                <form>
-                                    <label>Address</label>
-                                    <input placeholder="123 st." required/>
-                                    <label>City</label>
-                                    <input placeholder="Los Angeles" required/>
-                                    <label>State</label>
-                                    <input placeholder="California" required/>
-                                    <label>Zipcode</label>
-                                    <input placeholder="123456" required/>
-                                </form>
+                                <section>
+                                    <label htmlFor="street">Address</label>
+                                    <input name="street" id="street" placeholder="123 st." required/>
+                                    <label htmlFor="city">City</label>
+                                    <input name="city" id="city" placeholder="Los Angeles" required/>
+                                    <label htmlFor="state">State</label>
+                                    <input name="state" id="state" placeholder="California" required/>
+                                    <label htmlFor="zipcode">Zipcode</label>
+                                    <input name="zipcode" id="zipcode" placeholder="123456" required/>
+                                </section>
+                            </section>
+                        </div>
+
+                        <div>
+                            <section id="Billing_Checkout">
+                            <h2 id="payment_details">Payment Details</h2>
+                                <label htmlFor="card_name">Name On Card</label>
+                                <input name="card_name" id="card_name" placeholder="John Doe" required/>
+                                <label htmlFor="card_number">Card Number</label>
+                                <input name="card_number" id="card_number" placeholder="1234 1234 1234 1234" required/>
+                                <label htmlFor="card_date">Expiry Date</label>
+                                <input name="card_date" id="card_date" placeholder="12/2023" required/>
+                                <label htmlFor="card_code">Secure Code</label>
+                                <input name="card_code" id="card_code" placeholder="123" required/>
                             </section>
                         </div>
 
@@ -106,10 +134,10 @@ export default class Step6 extends Component {
                     <div id="Checkout_Buttons">
                         {this.state.error ? <p id="Checkout_Error">Please complete all information</p> : null}
                         <button onClick={() => history.push('/order/5')}>Back</button>
-                        <button type="submit" onClick={this.CompleteOrder}>Order</button>
+                        <button type="submit">Order</button>
                     </div>
 
-                </div>
+                </form>
 
             </div>
         )

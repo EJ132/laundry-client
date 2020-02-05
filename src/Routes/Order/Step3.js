@@ -82,10 +82,10 @@ export default class Step3 extends Component {
                         <label htmlFor="hot" >Hot</label>
                     </div>
                     <input id="wash_special" placeholder="specific needs type here" type="text"/>
-                    <div>
+                    <section>
                         <button onClick={() => history.push('/order/2')}>Back</button>
                         <button type="submit">Next</button>
-                    </div>
+                    </section>
                 </form>
             </div>
         )

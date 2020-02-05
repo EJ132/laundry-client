@@ -53,7 +53,7 @@ export default class Step2 extends Component {
                         id="cold"
                         type="radio"
                         required
-                        onChange={() => this.checker('Cold')}
+                        onChange={() => this.checker('Cold') }
                         checked={this.state.checked === 'Cold' ? true : false}
                         ></input>
                         <label htmlFor="cold" >Cold</label>
@@ -79,10 +79,10 @@ export default class Step2 extends Component {
                         <label htmlFor="hot" >Hot</label>
                     </div>
                     <input id="wash_special" placeholder="specific needs type here || or other instructions" type="text"/>
-                    <div>
+                    <section>
                         <button onClick={() => history.push('/order/1')}>Back</button>
                         <button type="submit">Next</button>
-                    </div>
+                    </section>
                 </form>
             </div>
         )

@@ -83,10 +83,10 @@ export default class Step4 extends Component {
                         <label htmlFor="high" >Tide w/ Downey <span>+ $1.00</span></label>
                     </div>
                     <input id="dry_special" placeholder="specific needs type here" type="text"/>
-                    <div>
+                    <section>
                         <button onClick={() => history.push('/order/3')}>Back</button>
                         <button type="submit">Next</button>
-                    </div>
+                    </section>
                 </form>
             </div>
         )

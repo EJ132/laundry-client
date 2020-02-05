@@ -96,10 +96,10 @@ export default class Step5 extends Component {
                         ></input>
                         <label htmlFor="none" >None</label>
                     </div>
-                    <div>
+                    <section>
                         <button onClick={() => history.push('/order/4')}>Back</button>
                         <button type="submit">Checkout</button>
-                    </div>
+                    </section>
                 </form>
             </div>
         )

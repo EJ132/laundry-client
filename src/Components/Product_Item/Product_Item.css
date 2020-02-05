@@ -20,7 +20,5 @@
 
 .Product_Item:hover {
     cursor: pointer;
-    width: 20%;
-    height: 310px;
     background-color: rgba(8, 8, 8, 0.103);
 }
