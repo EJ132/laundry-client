@@ -32,7 +32,7 @@
     width: 20%;
     min-height: 65vh;
     /* background-color: hotpink; */
-    padding-top: 200px;
+    padding-top: 150px;
 }
 
 .Product_Filter ul {
@@ -45,10 +45,10 @@
     padding: 6px;
 }
 
-.Product_Filter li {
+.Product_Filter ul li {
     list-style-type: none;
-    width: 80%;
-    padding: 5px;
+    width: 90%;
+    padding: 10px;
 }
 
 .Product_Filter ul input {

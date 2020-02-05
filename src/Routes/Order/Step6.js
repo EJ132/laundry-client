@@ -68,29 +68,6 @@ export default class Step6 extends Component {
                 <h1>Checkout</h1>
                 <form id="Checkout_Box" onSubmit={this.CompleteOrder}>
                     <div className="Checkout_Details">
-                        <div>
-                            <section>
-                            <h2 id="Checkout_Details_Header">Details</h2>
-                            <h2>Load</h2>
-                                <p>+ {this.state.allsteps[0]}</p>
-                            </section>
-                            <section>
-                                <h2>Wash</h2>
-                                <p>+ {this.state.allsteps[1]}</p>
-                            </section>
-                            <section>
-                                <h2>Dry</h2>
-                                <p>+ {this.state.allsteps[2]}</p>
-                            </section>
-                            <section>
-                                <h2>Soap</h2>
-                                <p>+ {this.state.allsteps[3]}</p>
-                            </section>
-                            <section>
-                                <h2>Modifications</h2>
-                                <p>+ {this.state.allsteps[4]}</p>
-                            </section>
-                        </div>
 
                         <div>
                             <section id="Billing_Checkout">
@@ -127,6 +104,26 @@ export default class Step6 extends Component {
 
                     <div className="Checkout_Price">
                         <h2>Summary</h2>
+                        <section>
+                            <h2>Load</h2>
+                                <p>+ {this.state.allsteps[0]}</p>
+                            </section>
+                            <section>
+                                <h2>Wash</h2>
+                                <p>+ {this.state.allsteps[1]}</p>
+                            </section>
+                            <section>
+                                <h2>Dry</h2>
+                                <p>+ {this.state.allsteps[2]}</p>
+                            </section>
+                            <section>
+                                <h2>Soap</h2>
+                                <p>+ {this.state.allsteps[3]}</p>
+                            </section>
+                            <section>
+                                <h2>Modifications</h2>
+                                <p>+ {this.state.allsteps[4]}</p>
+                        </section>
                         <p>- Normal Load</p>
                         <p id="final_price">Total: <span>$13.00</span></p>
                     </div>

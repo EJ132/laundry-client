@@ -32,12 +32,13 @@ class Profile extends Component {
     }
 
     render () {
+        console.log(this.context.user)
         return (
             <div className="Profile">
                 <NavBar />
                 <ProfileContainer />
 
-                <Dashboard fullname={this.context.user.fullname}/>
+                <Dashboard fullname={this.context.user.full_name}/>
 
             </div>
         );

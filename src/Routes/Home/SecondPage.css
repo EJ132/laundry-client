@@ -1,10 +1,12 @@
 .SecondPage {
     text-align: center;
     background-color: white;
+    color: rgba(8, 8, 8, 0.9);
     background-size: 100%;
     min-height: 70vh;
     width: 100%;
     overflow: hidden;
+    border-bottom: 20px solid black;
   }
 
   .SecondPage div {

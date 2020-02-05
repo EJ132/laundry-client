@@ -104,7 +104,7 @@
 #Billing_Checkout h2 {
     font-size: 2rem;
     text-align: center;
-    padding: 6px;
+    padding: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid gold;
     width: 35%;
@@ -113,12 +113,13 @@
 }
 
 #Billing_Checkout label {
-    font-size: 14px;
+    font-size: 20px;
     display: flex;
 }
 
 #Billing_Checkout input {
     display: flex;
+    font-size: 20px;
     justify-content: left;
     width: 50%;
     background-color: transparent;
@@ -138,9 +139,10 @@
 .Checkout_Price {
     text-align: center;
     width: 50%;
+    font-size: 1.25rem;
 }
 
-.Checkout_Price h2 {
+.Checkout_Price > h2 {
     font-size: 2rem;
     padding: 6px;
     width: 35%;
@@ -148,6 +150,27 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+}
+
+.Checkout_Price p {
+    padding: 10px 10px 10px 12%; 
+    font-size: 1.25rem;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.Checkout_Price section h2 {
+    font-size: 1.25rem;
+    text-align: left;
+    border: none;
+    padding: 10px 10px 10px 12%;
+}
+
+.Checkout_Price section p {
+    text-align: left;
+    font-size: 1rem;
+    padding-left: 18%;
+    padding-bottom: 1%;
 }
 
 #final_price {
@@ -170,4 +193,5 @@
 
 #payment_details {
     width: 50% !important;
+    margin-bottom: 25px !important;
 }

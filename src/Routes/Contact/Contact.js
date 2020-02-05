@@ -11,16 +11,16 @@ class Contact extends Component {
 
                 <div className="Contact_header">
                     <h3>GOT A QUESTION?</h3>
-                    <h1>Contact Shacker</h1>
+                    <h1>Contact Sudz</h1>
                     <p>We are here to help and answer any questions you might have. We look forward to hearing from you!</p>
                 </div>
 
                 <div className='Contact_Section'>
                     <form>
                         <label>Name</label>
-                        <input placeholder='Shaker Shacker'></input>
+                        <input placeholder='Shaker Sudz'></input>
                         <label>Email</label>
-                        <input placeholder='shacker123@gmail.com'></input>
+                        <input placeholder='sudz123@gmail.com'></input>
                         <label>Message</label>
                         <textarea placeholder='We will get back you shortly :)'></textarea>
                         <button type="submit">Submit</button>

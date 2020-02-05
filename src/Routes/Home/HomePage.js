@@ -48,7 +48,7 @@ class HomePage extends Component {
 
             <div className="Main">
                 <div className='Overlay_Homepage'>
-                    <h1>Welcome to Shacker</h1>
+                    <h1>Welcome to Sudz</h1>
                     <h2>The best laundry service at your door.</h2>
                     <button className="Start-Button" onClick={this.startNow}><span>Start Now</span></button>
                     <button className="Learn-Button" onClick={FourthPg}><span>Learn More</span></button>
@@ -58,27 +58,9 @@ class HomePage extends Component {
             <div className="SecondPage">
                 <header className="SecondPage-Title">About Us</header>
                 <div>
-                <p className="SecondPage-P1">Shacker is a laundry service company based in the Los Angeles area. Our task is to do all the heavy work
+                <p className="SecondPage-P1">Sudz is a laundry service company based in the Los Angeles area. Our task is to do all the heavy work
                     for you and make your life simpler. It's just as easy as ordering a pizza!</p>
                 <img className="SecondPage-img" alt='los angeles city' src="https://images.unsplash.com/photo-1515896769750-31548aa180ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2334&q=80"/>
-                </div>
-            </div>
-
-            <div className="ThirdPage">
-                <div>
-                    <div className="Icon_Container">
-                        <img className="Icons" alt='order icon' src={Order}/>
-                        <img className="Icons" alt='wash icon' src={Wash}/>
-                        <img className="Icons" alt='deliver icon' src={Deliver}/>
-                    </div>
-                    <div className="Icon_Names">
-                        <ul>
-                            <li>Order</li>
-                            <li id='wash'>Wash</li>
-                            <li>Deliver</li>
-                        </ul>
-                    </div>
-                    
                 </div>
             </div>
 

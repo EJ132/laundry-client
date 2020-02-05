@@ -1,6 +1,7 @@
 .FourthPage {
     text-align: center;
-    background-color: white;
+    background-color: rgba(8, 8, 8, 0.9);
+    color: white;
     background-size: 100%;
     min-height: 70vh;
     width: 100%;
@@ -18,16 +19,16 @@
   .FourthPage p {
       padding-left: 100px;
       font-size: 18px;
-      margin-top: 130px;
-      width: 50%
+      margin-top: 7%;
+      width: 51%;
+      line-height: 30px;
   }
 
   .Fourth-Header {
       font-size: 34px;
       font-weight: bold;
       font-family: Georgia, 'Times New Roman', Times, serif;
-      color: black;
-      margin-top: 50px;
+      padding-top: 50px;
   }
 
   .FourthPage img {
